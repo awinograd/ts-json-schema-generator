@@ -37,6 +37,7 @@ import { TypeOperatorNodeParser } from "../src/NodeParser/TypeOperatorNodeParser
 import { TypeReferenceNodeParser } from "../src/NodeParser/TypeReferenceNodeParser";
 import { UndefinedTypeNodeParser } from "../src/NodeParser/UndefinedTypeNodeParser";
 import { UnionNodeParser } from "../src/NodeParser/UnionNodeParser";
+import { VoidNodeParser } from "../src/NodeParser/VoidNodeParser";
 import { SubNodeParser } from "../src/SubNodeParser";
 import { TopRefNodeParser } from "../src/TopRefNodeParser";
 
@@ -71,6 +72,7 @@ export function createParser(program: ts.Program, config: Config): NodeParser {
         .addNodeParser(new AnyTypeNodeParser())
         .addNodeParser(new UndefinedTypeNodeParser())
         .addNodeParser(new ObjectTypeNodeParser())
+        .addNodeParser(new VoidNodeParser())
 
         .addNodeParser(new StringLiteralNodeParser())
         .addNodeParser(new NumberLiteralNodeParser())

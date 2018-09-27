@@ -24,6 +24,7 @@ import { StringTypeFormatter } from "../src/TypeFormatter/StringTypeFormatter";
 import { TupleTypeFormatter } from "../src/TypeFormatter/TupleTypeFormatter";
 import { UndefinedTypeFormatter } from "../src/TypeFormatter/UndefinedTypeFormatter";
 import { UnionTypeFormatter } from "../src/TypeFormatter/UnionTypeFormatter";
+import { VoidTypeFormatter } from "../src/TypeFormatter/VoidTypeFormatter";
 
 
 
@@ -38,6 +39,7 @@ export function createFormatter(config: Config): TypeFormatter {
         .addTypeFormatter(new NumberTypeFormatter())
         .addTypeFormatter(new BooleanTypeFormatter())
         .addTypeFormatter(new NullTypeFormatter())
+        .addTypeFormatter(new VoidTypeFormatter())
 
         .addTypeFormatter(new AnyTypeFormatter())
         .addTypeFormatter(new UndefinedTypeFormatter())
