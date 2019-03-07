@@ -21,6 +21,7 @@ import { PrimitiveUnionTypeFormatter } from "../src/TypeFormatter/PrimitiveUnion
 import { ReferenceTypeFormatter } from "../src/TypeFormatter/ReferenceTypeFormatter";
 import { RestTypeFormatter } from "../src/TypeFormatter/RestTypeFormatter";
 import { StringTypeFormatter } from "../src/TypeFormatter/StringTypeFormatter";
+import { SymbolTypeFormatter } from "../src/TypeFormatter/SymbolTypeFormatter";
 import { TupleTypeFormatter } from "../src/TypeFormatter/TupleTypeFormatter";
 import { UndefinedTypeFormatter } from "../src/TypeFormatter/UndefinedTypeFormatter";
 import { UnionTypeFormatter } from "../src/TypeFormatter/UnionTypeFormatter";
@@ -40,6 +41,7 @@ export function createFormatter(config: Config): TypeFormatter {
         .addTypeFormatter(new BooleanTypeFormatter())
         .addTypeFormatter(new NullTypeFormatter())
         .addTypeFormatter(new VoidTypeFormatter())
+        .addTypeFormatter(new SymbolTypeFormatter())
 
         .addTypeFormatter(new AnyTypeFormatter())
         .addTypeFormatter(new UndefinedTypeFormatter())

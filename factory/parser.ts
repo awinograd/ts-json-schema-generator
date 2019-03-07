@@ -38,6 +38,7 @@ import { TypeReferenceNodeParser } from "../src/NodeParser/TypeReferenceNodePars
 import { UndefinedTypeNodeParser } from "../src/NodeParser/UndefinedTypeNodeParser";
 import { UnionNodeParser } from "../src/NodeParser/UnionNodeParser";
 import { VoidNodeParser } from "../src/NodeParser/VoidNodeParser";
+import { SymbolNodeParser } from "../src/NodeParser/SymbolNodeParser";
 import { SubNodeParser } from "../src/SubNodeParser";
 import { TopRefNodeParser } from "../src/TopRefNodeParser";
 
@@ -73,6 +74,7 @@ export function createParser(program: ts.Program, config: Config): NodeParser {
         .addNodeParser(new UndefinedTypeNodeParser())
         .addNodeParser(new ObjectTypeNodeParser())
         .addNodeParser(new VoidNodeParser())
+        .addNodeParser(new SymbolNodeParser())
 
         .addNodeParser(new StringLiteralNodeParser())
         .addNodeParser(new NumberLiteralNodeParser())
