@@ -21,6 +21,7 @@ const PrimitiveUnionTypeFormatter_1 = require("../src/TypeFormatter/PrimitiveUni
 const ReferenceTypeFormatter_1 = require("../src/TypeFormatter/ReferenceTypeFormatter");
 const RestTypeFormatter_1 = require("../src/TypeFormatter/RestTypeFormatter");
 const StringTypeFormatter_1 = require("../src/TypeFormatter/StringTypeFormatter");
+const SymbolTypeFormatter_1 = require("../src/TypeFormatter/SymbolTypeFormatter");
 const TupleTypeFormatter_1 = require("../src/TypeFormatter/TupleTypeFormatter");
 const UndefinedTypeFormatter_1 = require("../src/TypeFormatter/UndefinedTypeFormatter");
 const UnionTypeFormatter_1 = require("../src/TypeFormatter/UnionTypeFormatter");
@@ -35,6 +36,7 @@ function createFormatter(config) {
         .addTypeFormatter(new BooleanTypeFormatter_1.BooleanTypeFormatter())
         .addTypeFormatter(new NullTypeFormatter_1.NullTypeFormatter())
         .addTypeFormatter(new VoidTypeFormatter_1.VoidTypeFormatter())
+        .addTypeFormatter(new SymbolTypeFormatter_1.SymbolTypeFormatter())
         .addTypeFormatter(new AnyTypeFormatter_1.AnyTypeFormatter())
         .addTypeFormatter(new UndefinedTypeFormatter_1.UndefinedTypeFormatter())
         .addTypeFormatter(new LiteralTypeFormatter_1.LiteralTypeFormatter())

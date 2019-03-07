@@ -37,6 +37,7 @@ const TypeReferenceNodeParser_1 = require("../src/NodeParser/TypeReferenceNodePa
 const UndefinedTypeNodeParser_1 = require("../src/NodeParser/UndefinedTypeNodeParser");
 const UnionNodeParser_1 = require("../src/NodeParser/UnionNodeParser");
 const VoidNodeParser_1 = require("../src/NodeParser/VoidNodeParser");
+const SymbolNodeParser_1 = require("../src/NodeParser/SymbolNodeParser");
 const TopRefNodeParser_1 = require("../src/TopRefNodeParser");
 function createParser(program, config) {
     const typeChecker = program.getTypeChecker();
@@ -69,6 +70,7 @@ function createParser(program, config) {
         .addNodeParser(new UndefinedTypeNodeParser_1.UndefinedTypeNodeParser())
         .addNodeParser(new ObjectTypeNodeParser_1.ObjectTypeNodeParser())
         .addNodeParser(new VoidNodeParser_1.VoidNodeParser())
+        .addNodeParser(new SymbolNodeParser_1.SymbolNodeParser())
         .addNodeParser(new StringLiteralNodeParser_1.StringLiteralNodeParser())
         .addNodeParser(new NumberLiteralNodeParser_1.NumberLiteralNodeParser())
         .addNodeParser(new BooleanLiteralNodeParser_1.BooleanLiteralNodeParser())
