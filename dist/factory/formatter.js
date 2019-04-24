@@ -7,6 +7,7 @@ const AnnotatedTypeFormatter_1 = require("../src/TypeFormatter/AnnotatedTypeForm
 const AnyTypeFormatter_1 = require("../src/TypeFormatter/AnyTypeFormatter");
 const ArrayTypeFormatter_1 = require("../src/TypeFormatter/ArrayTypeFormatter");
 const BooleanTypeFormatter_1 = require("../src/TypeFormatter/BooleanTypeFormatter");
+const ConstructorTypeFormatter_1 = require("../src/TypeFormatter/ConstructorTypeFormatter");
 const DefinitionTypeFormatter_1 = require("../src/TypeFormatter/DefinitionTypeFormatter");
 const EnumTypeFormatter_1 = require("../src/TypeFormatter/EnumTypeFormatter");
 const FunctionTypeFormatter_1 = require("../src/TypeFormatter/FunctionTypeFormatter");
@@ -37,6 +38,7 @@ function createFormatter(config) {
         .addTypeFormatter(new NullTypeFormatter_1.NullTypeFormatter())
         .addTypeFormatter(new VoidTypeFormatter_1.VoidTypeFormatter())
         .addTypeFormatter(new SymbolTypeFormatter_1.SymbolTypeFormatter())
+        .addTypeFormatter(new ConstructorTypeFormatter_1.ConstructorTypeFormatter())
         .addTypeFormatter(new AnyTypeFormatter_1.AnyTypeFormatter())
         .addTypeFormatter(new UndefinedTypeFormatter_1.UndefinedTypeFormatter())
         .addTypeFormatter(new LiteralTypeFormatter_1.LiteralTypeFormatter())

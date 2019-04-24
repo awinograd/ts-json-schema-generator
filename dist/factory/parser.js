@@ -11,6 +11,7 @@ const ArrayNodeParser_1 = require("../src/NodeParser/ArrayNodeParser");
 const BooleanLiteralNodeParser_1 = require("../src/NodeParser/BooleanLiteralNodeParser");
 const BooleanTypeNodeParser_1 = require("../src/NodeParser/BooleanTypeNodeParser");
 const CallExpressionParser_1 = require("../src/NodeParser/CallExpressionParser");
+const ConstructorNodeParser_1 = require("../src/NodeParser/ConstructorNodeParser");
 const EnumNodeParser_1 = require("../src/NodeParser/EnumNodeParser");
 const ExpressionWithTypeArgumentsNodeParser_1 = require("../src/NodeParser/ExpressionWithTypeArgumentsNodeParser");
 const FunctionTypeNodeParser_1 = require("../src/NodeParser/FunctionTypeNodeParser");
@@ -28,6 +29,7 @@ const ParenthesizedNodeParser_1 = require("../src/NodeParser/ParenthesizedNodePa
 const RestTypeNodeParser_1 = require("../src/NodeParser/RestTypeNodeParser");
 const StringLiteralNodeParser_1 = require("../src/NodeParser/StringLiteralNodeParser");
 const StringTypeNodeParser_1 = require("../src/NodeParser/StringTypeNodeParser");
+const SymbolNodeParser_1 = require("../src/NodeParser/SymbolNodeParser");
 const TupleNodeParser_1 = require("../src/NodeParser/TupleNodeParser");
 const TypeAliasNodeParser_1 = require("../src/NodeParser/TypeAliasNodeParser");
 const TypeLiteralNodeParser_1 = require("../src/NodeParser/TypeLiteralNodeParser");
@@ -37,7 +39,6 @@ const TypeReferenceNodeParser_1 = require("../src/NodeParser/TypeReferenceNodePa
 const UndefinedTypeNodeParser_1 = require("../src/NodeParser/UndefinedTypeNodeParser");
 const UnionNodeParser_1 = require("../src/NodeParser/UnionNodeParser");
 const VoidNodeParser_1 = require("../src/NodeParser/VoidNodeParser");
-const SymbolNodeParser_1 = require("../src/NodeParser/SymbolNodeParser");
 const TopRefNodeParser_1 = require("../src/TopRefNodeParser");
 function createParser(program, config) {
     const typeChecker = program.getTypeChecker();
@@ -71,6 +72,7 @@ function createParser(program, config) {
         .addNodeParser(new ObjectTypeNodeParser_1.ObjectTypeNodeParser())
         .addNodeParser(new VoidNodeParser_1.VoidNodeParser())
         .addNodeParser(new SymbolNodeParser_1.SymbolNodeParser())
+        .addNodeParser(new ConstructorNodeParser_1.ConstructorNodeParser())
         .addNodeParser(new StringLiteralNodeParser_1.StringLiteralNodeParser())
         .addNodeParser(new NumberLiteralNodeParser_1.NumberLiteralNodeParser())
         .addNodeParser(new BooleanLiteralNodeParser_1.BooleanLiteralNodeParser())
