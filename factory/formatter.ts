@@ -7,6 +7,7 @@ import { AnnotatedTypeFormatter } from "../src/TypeFormatter/AnnotatedTypeFormat
 import { AnyTypeFormatter } from "../src/TypeFormatter/AnyTypeFormatter";
 import { ArrayTypeFormatter } from "../src/TypeFormatter/ArrayTypeFormatter";
 import { BooleanTypeFormatter } from "../src/TypeFormatter/BooleanTypeFormatter";
+import { ConstructorTypeFormatter } from "../src/TypeFormatter/ConstructorTypeFormatter";
 import { DefinitionTypeFormatter } from "../src/TypeFormatter/DefinitionTypeFormatter";
 import { EnumTypeFormatter } from "../src/TypeFormatter/EnumTypeFormatter";
 import { FunctionTypeFormatter } from "../src/TypeFormatter/FunctionTypeFormatter";
@@ -42,6 +43,7 @@ export function createFormatter(config: Config): TypeFormatter {
         .addTypeFormatter(new NullTypeFormatter())
         .addTypeFormatter(new VoidTypeFormatter())
         .addTypeFormatter(new SymbolTypeFormatter())
+        .addTypeFormatter(new ConstructorTypeFormatter())
 
         .addTypeFormatter(new AnyTypeFormatter())
         .addTypeFormatter(new UndefinedTypeFormatter())

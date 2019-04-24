@@ -12,6 +12,7 @@ import { ArrayNodeParser } from "../src/NodeParser/ArrayNodeParser";
 import { BooleanLiteralNodeParser } from "../src/NodeParser/BooleanLiteralNodeParser";
 import { BooleanTypeNodeParser } from "../src/NodeParser/BooleanTypeNodeParser";
 import { CallExpressionParser } from "../src/NodeParser/CallExpressionParser";
+import { ConstructorNodeParser } from "../src/NodeParser/ConstructorNodeParser";
 import { EnumNodeParser } from "../src/NodeParser/EnumNodeParser";
 import { ExpressionWithTypeArgumentsNodeParser } from "../src/NodeParser/ExpressionWithTypeArgumentsNodeParser";
 import { FunctionTypeNodeParser } from "../src/NodeParser/FunctionTypeNodeParser";
@@ -29,6 +30,7 @@ import { ParenthesizedNodeParser } from "../src/NodeParser/ParenthesizedNodePars
 import { RestTypeNodeParser } from "../src/NodeParser/RestTypeNodeParser";
 import { StringLiteralNodeParser } from "../src/NodeParser/StringLiteralNodeParser";
 import { StringTypeNodeParser } from "../src/NodeParser/StringTypeNodeParser";
+import { SymbolNodeParser } from "../src/NodeParser/SymbolNodeParser";
 import { TupleNodeParser } from "../src/NodeParser/TupleNodeParser";
 import { TypeAliasNodeParser } from "../src/NodeParser/TypeAliasNodeParser";
 import { TypeLiteralNodeParser } from "../src/NodeParser/TypeLiteralNodeParser";
@@ -38,7 +40,6 @@ import { TypeReferenceNodeParser } from "../src/NodeParser/TypeReferenceNodePars
 import { UndefinedTypeNodeParser } from "../src/NodeParser/UndefinedTypeNodeParser";
 import { UnionNodeParser } from "../src/NodeParser/UnionNodeParser";
 import { VoidNodeParser } from "../src/NodeParser/VoidNodeParser";
-import { SymbolNodeParser } from "../src/NodeParser/SymbolNodeParser";
 import { SubNodeParser } from "../src/SubNodeParser";
 import { TopRefNodeParser } from "../src/TopRefNodeParser";
 
@@ -75,6 +76,7 @@ export function createParser(program: ts.Program, config: Config): NodeParser {
         .addNodeParser(new ObjectTypeNodeParser())
         .addNodeParser(new VoidNodeParser())
         .addNodeParser(new SymbolNodeParser())
+        .addNodeParser(new ConstructorNodeParser())
 
         .addNodeParser(new StringLiteralNodeParser())
         .addNodeParser(new NumberLiteralNodeParser())
